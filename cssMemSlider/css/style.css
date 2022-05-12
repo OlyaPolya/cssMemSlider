@@ -99,5 +99,15 @@ color: #D23540;
 
 .right-dots,
 .left-dots {
-  width: 30%;
+  width: 29%;
+  background-repeat: repeat;
+}
+
+.right-dots {
+  background-image: url('../assets/icons/Untitled-3.png');
+
+}
+
+.left-dots {
+  background-image: url('../assets/icons/Untitled-4.png');
 }
