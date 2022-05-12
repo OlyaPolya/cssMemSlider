@@ -1,16 +1,17 @@
-/*Обнуление*/
+/*SOME STUFF*/
+
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ul,
 ol,
 li {
-    list-style: none;
+  list-style: none;
 }
 
 img {
-    vertical-align: top;
+  vertical-align: top;
 }
 
 h1,
@@ -19,8 +20,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: inherit;
-    font-size: inherit;
+  font-weight: inherit;
+  font-size: inherit;
 }
 
 p {
@@ -28,35 +29,39 @@ p {
 }
 
 html {
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth;
 }
 
+/*BASE*/
 
 html,
 body {
-    height: 100%;
-    font-family: 'League Spartan', sans-serif;
-    font-size: 1.25rem;
-    color: #F79C21;
-    font-weight: 500;
-
+  height: 100%;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.25rem;
+  color: #f79c21;
+  font-weight: 500;
 }
 
 .wrapper {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .container {
-    width: 64rem;
-    margin: 0 auto;
-    box-sizing: content-box; 
+  width: 64rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 1rem;
 }
+
+/*HEADER*/
 
 .header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   background-color: #242f4b;
+  padding-bottom: 1rem;
 }
 
 .header-text {
@@ -64,7 +69,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 h1 {
@@ -72,25 +76,24 @@ h1 {
   font-size: 3rem;
   margin: 1rem 0 0;
 }
+
 h1 span {
-color: #D23540;
+  color: #d23540;
 }
 
 .header p {
   font-family: 'Raleway', sans-serif;
-  color: white;
   font-weight: 800;
-  margin-left: 22%;
+  margin-left: 20%;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  color: white;
 }
 
-.header-background-dots{
+.header-background-dots {
   display: flex;
   width: 100%;
-  height: 5rem;
-  background-repeat: repeat;
-  color: aliceblue;
+  height: 4.9rem;
 }
 
 .header-background-dots:last-child {
@@ -105,9 +108,22 @@ color: #D23540;
 
 .right-dots {
   background-image: url('../assets/icons/Untitled-3.png');
-
 }
 
 .left-dots {
   background-image: url('../assets/icons/Untitled-4.png');
+}
+
+/*MAIN*/
+
+.slider-show {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(4, 100%);
+  grid-template-rows: auto;
+  overflow-x: hidden;
+  align-items: center;
+  justify-items: center;
+  background-color: #242f4b;
+  padding-bottom: 1rem;
 }
