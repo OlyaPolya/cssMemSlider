@@ -132,16 +132,11 @@ input {
 }
 
 .slider-img {
-  display: grid;
-  grid-auto-flow: column;
-  width: 90%;
-  grid-template-columns: repeat(5, 100%);
-  grid-template-rows: 30rem;
+  display: flex;
   overflow-x: hidden;
+  width: 90%;
   align-items: center;
-  justify-items: center;
-  background-color: #242f4b;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .slider-img .img {
@@ -163,14 +158,17 @@ input {
 }
 
 .img {
+  flex-shrink: 0;
+  display: flex;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  align-items: baseline;
 }
 .img img {
   object-fit: cover;
-  object-position: 50% top;
+
   width: 100%;
-  height: 100%;
 }
 
 .slider-body {
@@ -178,7 +176,7 @@ input {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 10rem;
+  padding-bottom: 1rem;
 }
 
 .slider-subtitle {
@@ -238,7 +236,7 @@ input {
 #FourthSlide:checked ~ .slider-body .slider-subtitle .subtitle-fourth,
 #FithSlide:checked ~ .slider-body .slider-subtitle .subtitle-fith {
   opacity: 1;
-  height: 2rem;
+  height: 4.5rem;
   animation: appearence 1s ease;
 }
 
@@ -262,6 +260,13 @@ input {
   background-color: #f79c21;
 }
 
+.footerbackground {
+  height: 4.5rem;
+  width: 100%;
+  background-color: #242f4b;
+  background-image: url('../assets/img/Untitled-0.png');
+}
+
 @media (min-width: 1280px) {
   .container {
     max-width: 64rem;
@@ -280,18 +285,6 @@ input {
   }
 }
 
-@media (max-width: 710px) {
-  .slider-img {
-    grid-template-rows: 20rem;
-  }
-}
-
-@media (max-width: 440px) {
-  .slider-img {
-    grid-template-rows: 17rem;
-  }
-}
-
 @media (max-width: 564px) {
   .header-text {
     text-align: center;
@@ -299,9 +292,17 @@ input {
   .header p {
     margin-left: 0;
   }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
 }
 
-@media (max-width: 470px) {
+@media (max-width: 700px) {
   .slider-body {
     flex-direction: column-reverse;
     padding-left: 0;
@@ -311,10 +312,3 @@ input {
     padding-right: 0;
   }
 }
-
-/*
-.burger-menu-icon:hover {
-  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
-    contrast(87%);
-}
-*/
